@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vfilmz | Premium Photography</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body class="theme-dark" data-gallery="masonry">
+
+  <!-- ── SETTINGS PANEL ── -->
+  <div class="settings-toggle" id="settingsToggle" title="Customize">
+    <i class="fa-solid fa-sliders"></i>
+  </div>
+  <div class="settings-panel" id="settingsPanel">
+    <h4>Customize</h4>
+
+    <label>Theme</label>
+    <div class="switch-group">
+      <button class="sw active" data-theme="dark">Dark / Gold</button>
+      <button class="sw" data-theme="light">Light / Silver</button>
+    </div>
+
+    <label>Gallery Style</label>
+    <div class="switch-group col">
+      <button class="sw active" data-gallery="masonry">Masonry Grid</button>
+      <button class="sw" data-gallery="lightbox">Lightbox Popup</button>
+    </div>
+
+
+  </div>
+
+  <!-- ── NAV ── -->
+  <nav id="navbar">
+    <div class="logo">V<span>filmz</span></div>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-sub">Premium Photography</p>
+      <h1>Capturing<br/><em>Timeless</em> Moments</h1>
+      <p class="hero-desc">Portrait · Wedding · Landscape · Fashion · Drone</p>
+      <a href="#gallery" class="btn-gold">Explore the Collections</a>
+    </div>
+    <div class="hero-scroll"><span></span></div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about">
+    <div class="container about-grid">
+      <div class="about-img">
+        <div class="img-frame">
+          <img id="aboutImg" src="" alt="Vfilmz Photographer" style="min-height:300px;"/>
+          <p class="about-photo-label">Velmurugan</p>
+          <div class="img-accent"></div>
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="section-tag">About Me</p>
+        <h2>The Art of <em>Visual Storytelling</em></h2>
+        <p>Vfilmz is a premium photography studio dedicated to capturing the raw beauty of every moment — from intimate portraits to grand landscapes, elegant weddings to high-fashion editorials.</p>
+        <p>With an eye for light, emotion, and composition, every frame is crafted to tell a story that lasts forever.</p>
+        <div class="stats">
+          <div><strong>2+</strong><span>Years Experience</span></div>
+          <div><strong>100+</strong><span>Sessions Done</span></div>
+          <div><strong>3<span style="font-size:.6em; text-transform:none; color:var(--accent);"> yrs</span></strong><span>Professionally Graduated</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── GALLERY ── -->
+  <section id="gallery">
+    <div class="container">
+      <p class="section-tag center">Portfolio</p>
+      <h2 class="center">Selected <em>Works</em></h2>
+      <div class="filter-group">
+        <button class="sw active" data-cat="all">All</button>
+        <button class="sw" data-cat="portrait">Portrait</button>
+        <button class="sw" data-cat="wedding">Wedding</button>
+        <button class="sw" data-cat="landscape">Landscape</button>
+        <button class="sw" data-cat="fashion">Fashion</button>
+        <button class="sw" data-cat="drone">Drone</button>
+      </div>
+
+      <div class="gallery-wrap" id="galleryWrap">
+        <!-- cards injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ── LIGHTBOX ── -->
+  <div class="lightbox" id="lightbox">
+    <button class="lb-close" id="lbClose"><i class="fa-solid fa-xmark"></i></button>
+    <button class="lb-prev" id="lbPrev"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="lb-next" id="lbNext"><i class="fa-solid fa-chevron-right"></i></button>
+    <img id="lbImg" src="" alt=""/>
+    <video id="lbVid" src="" controls playsinline style="display:none;max-width:90vw;max-height:80vh;"></video>
+    <p id="lbCaption"></p>
+  </div>
+
+  <!-- ── SERVICES ── -->
+  <section id="services">
+    <div class="container">
+      <p class="section-tag center">What I Offer</p>
+      <h2 class="center">Photography <em>Services</em></h2>
+
+      <!-- Row 1: 4 cards -->
+      <div class="services-grid">
+        <div class="service-card flip-card">
+          <div class="flip-inner">
+            <div class="flip-front"><i class="fa-solid fa-user"></i><h3>Portrait</h3><p>Expressive, editorial-quality portraits that reveal personality and depth.</p></div>
+            <div class="flip-back"><h3>Portrait</h3><p>Natural lighting · Studio sessions · Editorial style · Same-day previews</p></div>
+          </div>
+        </div>
+        <div class="service-card flip-card featured">
+          <div class="flip-inner">
+            <div class="flip-front"><i class="fa-solid fa-heart"></i><h3>Wedding</h3><p>Full-day coverage of your most cherished celebration, beautifully documented.</p></div>
+            <div class="flip-back"><h3>Wedding Packages</h3><p>Pre-wedding · Candid Photo · Candid Video · Wedding Drone</p></div>
+          </div>
+        </div>
+        <div class="service-card flip-card">
+          <div class="flip-inner">
+            <div class="flip-front"><i class="fa-solid fa-mountain-sun"></i><h3>Landscape</h3><p>Breathtaking natural and urban landscapes printed as fine-art pieces.</p></div>
+            <div class="flip-back"><h3>Landscape</h3><p>Golden hour shoots · Fine art prints · RAW files included · Location scouting</p></div>
+          </div>
+        </div>
+        <div class="service-card flip-card">
+          <div class="flip-inner">
+            <div class="flip-front"><i class="fa-solid fa-shirt"></i><h3>Fashion</h3><p>High-end editorial and lookbook photography for brands and designers.</p></div>
+            <div class="flip-back"><h3>Fashion</h3><p>Lookbook ready · Brand campaigns · Retouching included · Studio &amp; outdoor</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: Drone, Photo Editing, Video Editing centered -->
+      <div class="services-grid-bottom">
+        <div class="service-card flip-card">
+          <div class="flip-inner">
+            <div class="flip-front"><i class="fa-solid fa-helicopter"></i><h3>Drone</h3><p>Bird's-eye storytelling with cinematic drone footage for events, landscapes, weddings and commercial projects.</p></div>
+            <div class="flip-back"><h3>Drone</h3><p>4K footage · FAA licensed · Event coverage · Cinematic editing</p></div>
+          </div>
+        </div>
+        <div class="service-card flip-card">
+          <div class="flip-inner">
+            <div class="flip-front"><i class="fa-solid fa-wand-magic-sparkles"></i><h3>Photo Editing</h3><p>Refined retouching and colour grading that transforms every frame into a work of art.</p></div>
+            <div class="flip-back"><h3>Photo Editing</h3><p>Colour grading · Exposure correction · Detail enhancement · Retouching · Tone &amp; contrast · Mood styling · Print-ready exports</p></div>
+          </div>
+        </div>
+        <div class="service-card flip-card">
+          <div class="flip-inner">
+            <div class="flip-front"><i class="fa-solid fa-film"></i><h3>Video Editing</h3><p>Cinematic cuts and seamless storytelling that bring your moments to life on screen.</p></div>
+            <div class="flip-back"><h3>Video Editing</h3><p>Cinematic colour grade · Motion graphics · Reels &amp; highlights · Sound design · 4K export</p></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <p class="section-tag">Get In Touch</p>
+        <h2>Let's Create <em>Together</em></h2>
+        <p>Ready to book a session or have a question? Reach out and I'll get back to you within 24 hours.</p>
+        <div class="contact-links">
+          <a href="mailto:vfilmz01@gmail.com"><i class="fa-solid fa-envelope"></i> vfilmz01@gmail.com</a>
+          <a href="https://wa.me/916383100912" target="_blank"><i class="fa-brands fa-whatsapp"></i> @vfilmz_01</a>
+          <a href="https://www.instagram.com/vfilmz.fx" target="_blank"><i class="fa-brands fa-instagram"></i> @vfilmz.fx</a>
+          <a href="tel:+916383100912"><i class="fa-solid fa-phone"></i> +91 6383100912</a>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="1056db64-ee4d-43ee-bcbd-d038227a62d8"/>
+        <input type="hidden" name="subject" value="New Client Message — Vfilmz Portfolio"/>
+        <input type="text" name="name" placeholder="Your Name" required/>
+        <input type="email" name="email" placeholder="Your Email" required/>
+        <select name="service" id="serviceSelect">
+          <option value="">Select Service</option>
+          <option>Portrait</option>
+          <option value="Wedding">Wedding</option>
+          <option>Landscape</option>
+          <option>Fashion</option>
+          <option>Drone</option>
+          <option>Photo Editing</option>
+          <option>Video Editing</option>
+        </select>
+        <div class="wedding-options" id="weddingOptions">
+          <label><input type="checkbox" name="wedding_service" value="Pre-wedding"/> Pre-wedding</label>
+          <label><input type="checkbox" name="wedding_service" value="Candid Photo"/> Candid Photo</label>
+          <label><input type="checkbox" name="wedding_service" value="Candid Video"/> Candid Video</label>
+          <label><input type="checkbox" name="wedding_service" value="Wedding Drone"/> Wedding Drone</label>
+        </div>
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn-gold">Send Message</button>
+        <p class="form-msg" id="formMsg"></p>
+      </form>
+    </div>
+  </section>
+  <footer>
+    <div class="logo">V<span>filmz</span></div>
+    <div style="display:flex; flex-direction:column; align-items:center; gap:.3rem;">
+      <p>© 2026 Vfilmz. All rights reserved.</p>
+      <p style="font-size:.7rem; color: var(--text2);">Built by <span style="color:var(--accent);">SedhuTech</span></p>
+      <p style="font-size:.7rem; color: var(--text2);">DM to Build your Brand's website <a href="https://www.instagram.com/codex_builds" target="_blank" style="color:var(--accent);">@codex_builds</a></p>
+      <div class="social">
+        <a href="https://wa.me/qr/T35I2WGAMI7CA1" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/codex_builds" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+    <div style="visibility:hidden;" class="logo">V<span>filmz</span></div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
